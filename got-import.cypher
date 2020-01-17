@@ -1,0 +1,1 @@
+MATCH (n) WHERE EXISTS(n.founded) RETURN DISTINCT "node" as entity, n.playedBy,  n.founded AS founded LIMIT 25 UNION ALL MATCH ()-[r]-() WHERE EXISTS(r.founded) RETURN DISTINCT "relationship" AS entity, r.founded AS founded LIMIT 25
